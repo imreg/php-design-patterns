@@ -1,0 +1,27 @@
+{
+  "require-dev": {
+    "php": ">=7.1",
+    "phpspec/phpspec": "^4.0",
+    "phpunit/phpunit": ">3.9"
+  },
+  "config": {
+    "bin-dir": "bin"
+  },
+  "autoload": {
+    "psr-4": {
+      "": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "require": {
+    "squizlabs/php_codesniffer": "^3.4"
+  },
+  "scripts": {
+    "phpcs": "bin/phpcs -p --standard=PSR2 --ignore=vendor ./src",
+    "phpcbf": "phpcbf -p --standard=PSR2 --ignore=vendor ./src"
+  }
+}
